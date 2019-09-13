@@ -34,10 +34,15 @@
 14. you will see the result.
 
 # If you want to run against Oracle 
-1. you have to change the scripts inside basic folder according to oracle
+1. you have to change the scripts inside basic folder according to oracle.
 2. place oralce jdbc jar inside lib folder 
 3. update liquibase properties - url and driver  according to oracle 
-4. thatis simple follow like above 
+4. that's it simple ! .
+
+
+
+all above stuffs done with this repository. so , 
+download it and run it like  ->  **D:\liquibaseDirect>liquibase.bat update**
 
 
 
