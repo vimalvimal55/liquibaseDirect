@@ -1,37 +1,45 @@
 ## Welcome to GitHub Pages
 
-You can use the [editor on GitHub](https://github.com/vimalvimal55/liquibaseDirect/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
+1. Download liquibase from  https://download.liquibase.org/ 
+2. download zip version of it.
+3. install it in D drive
+4. unzip the folder 
+5. go inside the folder , d:\liquibase-3.8.0-bin
+6. place liquibase.properties inside the folder and place my mysql-connector-java-8.0.11.jar inside lib folder.
+7. paste following content inside liquibase.properties 
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
-
-### Markdown
-
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
-
-```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
 ```
+    ### Connection Property File For File Based HSQL Database
+    ### Example use: ..\..\liquibase --defaultsFile=liquibase.hsql.properties update
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
+    classpath=src
+    changeLogFile=src/main/resources/liquibase/changelog/changelog-master.xml
+    driver=com.mysql.jdbc.Driver
+    username=root
+    password=password
+    url=jdbc:mysql://localhost:3306/bookdb?useSSL=false
+    #logLevel=DEBUG
+    #referenceUrl=jdbc:hsqldb:file:tmp/db/hsql/liquibase;shutdown=true
+    #referenceUsername=liquibase
+    #referencePassword=liquibase
+    #contexts=dev,main,prod
+   
+    
+8. If you have access to https://github.com/vimalvimal55/liquibaseTool
+9. copy the src folder from there 
+10. 9 needs to be done to follow the structures mentioned in changelog path 
+11. go to command line mode 
+12. run following command 
+13. d:\liquibase-3.8.0-bin>liquibase.bat update
+14. you will see the result.
 
-### Jekyll Themes
+# If you want to run against Oracle 
+1. you have to change the scripts inside basic folder according to oracle
+2. place oralce jdbc jar inside lib folder 
+3. update liquibase properties - url and driver  according to oracle 
+4. thatis simple follow like above 
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/vimalvimal55/liquibaseDirect/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
 
-### Support or Contact
 
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+
+
